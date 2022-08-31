@@ -1,13 +1,25 @@
-import Java.util.Scanner;
+import java.util.Scanner;
 
 public class Salary {                         
    public static void main (String [] args) { 
-      int wage;  
+      double wage;  
       Scanner scnr = new Scanner(System.in);
 
-      wage = scnr.nextInt();
+      boolean quit = false;
 
-      System.out.print("Salary is ");         
-      System.out.println(wage * 40 * 52);     
+      while (quit == false) {
+         wage = scnr.nextDouble();
+
+         if (wage <= 0) {
+            quit = true;
+            break;
+         }
+
+         else {
+            System.out.print("Your salary before taxes is ");         
+            System.out.print(wage * 40 * 52); 
+            System.out.println("."); 
+         }
+      }         
    } 
 }
