@@ -12,6 +12,8 @@ public class Salary {
 
          if (wage <= 0) {
             quit = true;
+            System.out.println("Input your dog's age in human years.");
+            System.out.println("Input a number less than or equal to 0 to quit.");
             break;
          }
 
